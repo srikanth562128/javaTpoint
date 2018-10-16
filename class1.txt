@@ -1,0 +1,205 @@
+https://github.com/sandipmohapatra/javaTpoint
+
+
+OOPS concept
+constructor
+static ,final
+interface,abstract class
+exception handling
+multi-Threading
+collection framework.
+----------------------------------------
+OOPS concept
+---------------------------
+1)class
+2)object
+3)Inheritance
+4)Polymorphism
+5)Abstraction
+6)Encapsulation
+-------------------------------------------
+1)class :- It is a blue print of an object.It is also called as object factory.
+a class is a collection of similar objects.
+A class contains variables and methods.
+
+2)object :- it is a referencial pointer .By object we can access the variables and methods of a class.
+Object are real world entiry.
+
+3)Inheritance :- it is used to reuse the existing class properties.
+In this we have parent class and child class.java support single inheritance.
+multiple inheritance is not supported in java.
+it provides code reusability.
+
+4)Polymorphism :- when one task is performed by different ways it is known as polymorphism.
+there are 2 types of polymorphism.
+i)compile time polymorphism:- function overloading.
+Function overloading means function having same function name but the return type and the parameter have different data type.
+example:-
+int sum(int a,int b)
+float sum(float a,float b)
+
+ii)runtime polymorphism:- function overriding.
+function overiding :- we require at least 2 classes .parent and child class.
+In this the function has the same name and the return type and parameter have same signature.
+example :- Interface and abstract class.
+
+5)Abstraction :- Hiding internal details and showing the functionality.
+In class we write the bussiness logics and complecated algorithims inside functions or methods but we access them
+by an object outside a class.
+Only the simplicity is displayed.
+
+example :- we switch on the light or fan it start working.The generation of elecricity is hidden.
+
+6)Encapsulation:- Binding code and data together into a single unit and protect them from other classes.
+protecting of data by using private access specifier is known as encapsulation.
+
+example:- A bean class is an example of encapsulation where all the data members are private.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+There are 4 access specifiers
+------------------------------------------
+1)private :- if we decalre the variables and methods as private we can access it within the class only.
+
+2)public:- if we declare the variables and methods as public we can access it within the class,outside the class ,outside the package also.
+
+3)protected :- if we declare the variables and methods as protected we can access it within 
+the class and in the subclass.
+
+4)default :- if we declare the varisbles and methods as default we can access it within the class but not outside the package. 
+
+-------------------------------------------------------------------------
+Constructor
+----------------------------------
+A constructor is a method /function which has the same name as that of the class name.
+It doesnot have any return type nor it returns any value.
+
+There are 2 types of constructor.
+1)default constructor
+2)parameterized constructor.
+
+if we use more than one constructor in a program it is known as constructor overloading.
+The constructors are mainly used to assign the values because it execute first when an object is created for a class.
+----------------------------------------------------------------------------------
+static :- we can declare a variable as static ,method as static and can have static block.
+In this a single copy is created in the JVM and we can access them without creating an object.
+we can also have a static inner class.
+The static block execute first before the main method.
+----------------------------------------------------------------
+Instance variables:
+----------------------------------------------------------------
+These variables belong to the instance of a class, thus an object. And every instance of that class (object) has it's own copy of that variable. Changes made to the variable don't reflect in other instances of that class.
+public class Product {
+    public int Barcode;}
+---------------------------------------------------------
+Class variables:
+---------------------------------------------------------
+These are also known as static member variables and there's only one copy of that variable that is shared with all instances of that class. If changes are made to that variable, all other instances will see the effect of the changes.
+public class Product {
+    public static int Barcode;}
+---------------------------------------------------------------------------
+
+final :- we can declare a class as final,variable as final and method as final.
+if we declare class as final we cannot extends or implement it .
+if we declare a variable as final we have to assign it .
+if we declare a method as final we cannot override it.
+
+
+
+----------------------------------------------------------------------------------
+Abstract class :- 
+if we declare a class as abstract we can have abstract methods as well as concrete methods.
+we cannot create object of an abstract class.
+we have to extend or inherite an abstract class and create object of the subclass .
+--------------------------------------------------------------
+
+
+Interface:-
+---------------------------------
+The main purpose of interface is to perform multiple inheritance in java.
+In interface we can only have abstract methods but no concrete methods.
+we cannot create object of an interface directly.
+we have to implement an interface and create object of the sub class.
+If we declare a variable it is bydefault static and final.
+The override method should have public access specifier.
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+Exception Handling
+-----------------------------------------
+In this we can handle the runtime exception.
+if the user gives an wrong input it can display error message and it sould not treminate the flow of control.
+we use 5 keywords
+1)try 2)catch 3)finally 4)throws 5)throw
+
+try-catch:- if the try is successful means there is error then the catch will exceute.
+try-finally :- if the try is successful or not doesnot matter the finally block will definitely execute.
+-------------------------------------------------------------
+
+Exceptions are 2 types
+1)checked exception :- sql exception,servlet exception ,interupted exception
+
+2)unchecked exception :- ArithmaticException ,NumberFormatException,ArrayIndexOutOfBound Exception
+
+----------------------------------------
+Multi-Threading 
+-----------------------------
+The threads will excute concurrently.
+It is known as multi tasking .
+
+To use multithreading methods we can either extends thread class or runnable interface.
+
+in thread class we have many methods but in runnable interface we have only run method.we mostly use the runnable 
+interface because it support multiple inheritance.
+
+synchronized :- After one thread completes its excecution then the second thread 
+will start its excecution.
+
+deadlock :-when one thread is waiting for other thread to execute and similarly other threads is also waiting for this thread to execute and no thread is excuting then this condition is known as deadlock.
+
+
+------------------------------------------------------------------------------------------ 
+Collection Framework
+-------------------------------------
+it is a framework that provides an architecture to store and manipulate the group of objects.
+
+It is a collection of objects.
+
+In this we have some interface like set,list,map
+
+we have some classes like TreeSet,HashSet,LinkedHashSet under the set(interface)
+
+we have classes like LinkedList,ArrayList,Vector,Stack under list (interface)
+
+we have HashTable,HashMap under map (interface)
+
+---------------------------------------------------------
+class casting
+------------------
+Base b = new Derived(); //reference variable of Base class points object of Derived class
+Derived d = b; //compile time error, requires casting
+Derived d = (Derived) b; // type casting Base to Derived
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
