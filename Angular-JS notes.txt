@@ -1,0 +1,430 @@
+AngularJS 
+---------------------
+1)AngularJS is an open-source web application framework or JavaScript framework. Develop and maintained by Google and by a community of individual developers.  
+
+2)In other word you can say AngularJS is an extended form of HTML with new attributes that is mainly develop for simple page web applications. 
+
+3)Angular JS is a structural framework for dynamic web apps.
+
+4)It lets you use HTMLs your template language and it extends HTML syntax.
+
+5)MVC:- Angular is a MVC framework refers to keeping a clean separation between the UI presentation ,the controller and the model in the front end.
+
+6)It supports dependency injection.
+
+7)Angular JS code is loosely coupled and has modular front end that may function as a reusable UI component.
+
+8)It support developing SPA application.SPA(single page application) .All the resources like html,css,javascript etc can be downloaded in a single page load.
+
+9)It support form and form validation.
+
+10)It support unit testing and end to end testing.Jasmine.js and Karma.js
+----------------------------------------------------------------------------------- 
+
+Requirement 
+Before start learning AngularJS you should know the basic of these languages:-  
+• HTML 
+• CSS 
+• JavaScript  
+Need Of AngularJS 
+AngularJS is basically develop for simplify the development and testing of model– view–controller (MVC) and model–view–view model (MVVM) architectures based web application. 
+
+Advantages 
+• Easy to learn  
+• Reduce the amount of java script code needed  
+• More responsive to user actions  
+• Large community support  
+• Open Source, completely free  
+• AngularJS provides reusable components    
+
+Disadvantages Of AngularJS  
+Not Secure, AngularJS is only JavaScript Framework nothing else that why not secure. 
+If the user disable JavaScript then user will just see the basic page nothing else. 
+
+-----------------------------------------------------------------
+
+Angular JS directives extends HTML attributes with the prifix ng-
+
+example :-
+1)ng-app
+2)ng-controller
+3)ng-model
+4)ng-bind
+5)ng-init
+6)ng-repeat
+
+*run on browser which support HTML 5.
+--------------------------------------------------------------
+1)data-ng-app
+2)data-ng-controller
+3)data-ng-model
+4)data-ng-bind
+5)data-ng-init
+6)data-ng-repeat
+
+*run on any browser .
+
+-------------------------------------------------------
+1)ng-app :-
+1) It inializes the angular JS application.
+2) The ng-app directive defines the root element of the angular js application.
+3) The ng-app directive will auto-bootstrap the application when a webpage is loaded.
+
+we can write:-
+<HTML ng-app>
+<div ng-app>
+<li ng-app>
+<span ng-app>
+
+----------------------------
+2)ng-model:-
+1) It bind the value of HTML controls like textbox,text-area,combo-box etc.
+2)It binds the value of html control to application data and also it provide data type validation such as number validation,email validation and required data.
+3)provide status for application data.(valid/invalid,dirty,error).
+ 4)provides CSS classes for HTML elements.
+5)Bind html elements to html forms.
+
+-----------------------------------------------
+Example 1:
+
+<!DOCTYPE html>
+<html lang="en-US">
+ <script src="angular.min.js""></script>
+<body> <div ng-app="">
+<p>Enter Name : <input type="text" ng-model="name"></p>     
+<p style="color:red";>Hello {{name}}</h2></p></p> </div> 
+</body>
+</html>
+
+------------------------------------------------------------------------------
+The AngularJS Components 
+There are three main component of AngularJS are following below -  
+ng-app - This directive defines AngularJS based web application to HTML. 
+ng-model - This directive binds the values of AngularJS application data to HTML input controls. 
+ng-bind - This directive binds the AngularJS Application data to HTML tags. 
+
+
+AngularJS Directives  
+AngularJS directives are basically used to extend the HTML attributes called Directives. They starts with prefix ng-. We will discuss following directives-  
+The Ng-App Directive  
+The ng-app directive is used to initializes an AngularJS application. ng-app is the root element of the Angular application. It is automatically initialize when the application is loaded. 
+
+
+
+Example-2
+
+<html> 
+<script src="angular.min.js"></script>
+<body>  
+<div ng-app="" ng-init="Name='Sandip'">  
+<p>Type your last Name :</p> <p>Name: <input type="text" ng-model="Name"></p> <p>Hello {{ Name }}</p>  
+</div>  
+</body> </html> 
+
+Ng-Model Directive  
+The ng-model directive is used binds the value of HTML controls (like input) to application data. 
+
+The ng-init Directive  
+The ng-init directive is used to initializes application data or value or you can say put the value to the variable. 
+
+The ng-repeat Directive  
+The ng-repeat directive is used to iterate the html elements for each item in a collection. 
+----------------------------------------------------------------------------------------
+Eample 3
+
+<html>
+<script src="angular.min.js"></script>
+<body> <div ng-app=""     ng-init="cities=['Delhi','Noida','Gurgaon']">
+<ul>
+<li ng-repeat="city in cities">{{ city }}     
+</li>   
+</ul> 
+</div> 
+</body> 
+</html> 
+
+-----------------------------------------------------------------------------------
+
+AngularJS – Expressions  {{  }}  
+Angular Expression are used to bind the directive data to HTML. Angular expression are put inside the double braces.
+
+Expressions behaves in same way as ng-bind directives. You can use express in the place of ng-bind.  
+AngularJS application expressions are like JS expressions and put the data where they are used. 
+
+
+
+
+
+Example 4
+<!DOCTYPE html>
+<html> <script src="angular.min.js"></script> 
+<body> 
+<div ng-app="">   
+<p>Simple Angular Expresion: {{ 38 + 2 }}</p> 
+</div>  
+</body> 
+</html>  
+-----------------------------------------------------------------------------------------
+Example 5
+<!DOCTYPE html> 
+<html> <script src="angular.min.js"></script> 
+<body>  
+<div ng-app="" ng-init="a=10; b=20;">   
+<p>Simple Angular Expresion: {{ a*b }}</p> 
+</div> </body> </html>
+---------------------------------------------------------------------------
+Example 6 
+<!DOCTYPE html> 
+<html> <script src="angular.min.js"></script> 
+<body>  
+<div ng-app="" ng-init="a=10; b=20;">   
+<p>Simple Angular Expresion: {{ a*b }}</p> 
+</div>  
+</body> 
+</html>
+---------------------------------------------------------------------------------
+Example 7
+<!DOCTYPE html> 
+<html> <script src="angular.min.js"></script> 
+<body>  
+<div ng-app=""> 
+<h1>Calculate sum</h1> 
+<input type="number" ng-model="a"> 
+<input type="number" ng-model="b">   
+<p>Simple Angular Sum: {{a+b}}</p> 
+</div>  
+</body> 
+</html> 
+-------------------------------------------------------
+AngularJS Objects  
+AngularJS objects are like JavaScript objects so you can easily access via dot(.) operator 
+Example 8
+<!DOCTYPE html> 
+<html>  
+<script src="angular.min.js"></script> 
+<body> 
+<div ng-app="" ng-init="student={Name:'Sandip',EmpNo:1038}"> 
+<p>The name is {{ student.Name }}</p> 
+<p>The Emp Number is {{ student.EmpNo }}</p> 
+</div> </body> </html> 
+
+--------------------------------------------------------------------
+AngularJS Arrays  
+AngularJS arrays are like JavaScript arrays so you can easily access via index. 
+Example 9
+<!DOCTYPE html> 
+<html> <script src="angular.min.js"></script> 
+<body> 
+<div ng-app="" ng-init="names=['amit','anil','khan','sunil']"> 
+<p>The third result is {{ names[2] }}</p> 
+</div> 
+</body> </html>
+
+
+-------------------------------------------------------------
+
+The AngularJS Controller basically JavaScript constructor function that is used to pass the AngularJS Scope.  
+In other word controller is used to control the data in the whole application.  
+AngularJS Controller 
+ 
+ 
+Example 10
+<html> <head>     
+<title>Angular JS Controller Example</title>      
+<script src = "angular.min.js"></script>    </head>        
+<body>       
+<h2>AngularJS Sample Controller Application</h2>               
+<div ng-app = "ukApp" ng-controller = "ukController">          
+Enter first name: <input type = "text" ng-model = "name.FName"><br><br>          
+Enter last name: <input type = "text" ng-model = "name.LName"><br><br>                    
+Your Name: {{name.fullN()}}       
+</div>              
+<script> 
+ var mainApp = angular.module("ukApp", []);             
+mainApp.controller('ukController', function($scope) 
+{             
+$scope.name = 
+{                
+FName: "sandip",                
+LName: "kumar",                                
+fullN: function() 
+{                   
+var studentObject;                   
+studentObject = $scope.name;                   
+return studentObject.FName + " " + studentObject.LName;                
+}             
+};          
+});       
+</script></body></html> 
+
+The angular Application always starts from directive ng-app so ng-app=”ukApp” is the starts point and end where the div is end.  
+The ng-controller="ukController " attribute is an AngularJS directive that is used for defining the controller.  
+The ukController function is a JavaScript function with $scope, this is dependency injection that’s built into AngularJS.  
+AngularJS will invoke the controller with a $scope object. 
+$scope.name is property of studentController object.  
+FName and LName are two properties of $scope.name object. They have some default value.  
+fullN is the function of $scope.name object which return the full name including first name and last name. 
+
+
+AngularJS Filters  
+----------------------------
+As the name filter can be used to transform the data. For example formatting a string to the lowercase. Filter can be used through the directives or expression by using the pipe (|) operator.  
+
+Here Is Some Common Filter Used In AngularJS Filters 
+-------------------------------------------------------------------------
+currency:-Change number to currency format 
+lowercase:- Change a string to lower case 
+orderBy:- Orders an array by an expression 
+uppercase:- Change a string to upper case 
+
+You can add filter to the expression by using pipe operator ( | ) forward by filter  
+
+Uppercase Filter Example   
+----------------------------------------------
+<p>The name is {{ name | uppercase }}</p>   
+</div>  
+
+Lowercase Filter Example  
+------------------------------------------------------
+<p>The name is {{ name | lowercase }}</p>   
+</div>  
+
+Currency Filter Example  
+------------------------------------------
+<input type="number" ng-model="rs"> 
+<input type="number" ng-model="qua">   
+<p>Total = {{ (rs * qua) | currency }}</p> 
+</div>
+
+Orderby Filter 
+------------------------------------ 
+To order subjects by marks, we've used orderBy marks.  
+
+<ul>   <li ng-repeat = "subject in student.subjects | orderBy:'marks'">      
+{{ subject.name + ', marks:' + subject.marks }}   
+</li>
+</ul> 
+
+
+AngularJS Forms  
+AngularJS provides the feature to bind the HTML form data or input fields to the model object. You can use these feature to bind the form data to model. Bind text field using 
+ng-model  
+
+AngularJS Text Field  
+
+You can simply bind text field using ng-model as shown following below-  
+
+Example 11
+<!DOCTYPE html>  
+<html lang="en-US"> 
+<script src="angular.min.js"></script> 
+<body> <div ng-app="">   
+<p>Enetr Name : <input type="text" ng-model="name"></p>     
+<p style="color:red";>Hello {{name}}</h2>
+</p>
+</p> 
+</div> 
+</body> 
+</html>
+
+
+AngularJS Binding Radio Buttons  
+You can easily bind radio buttons just like text boxes. If you are using group of radio button use same ng-model name.  
+
+Example 11
+  
+<!DOCTYPE html>  
+<html lang="en-US"> 
+<script src="angular.min.js"></script> 
+<body> 
+<div ng-app=""> 
+<p>Select gender</p> 
+<form>
+ Male: <input type="radio" ng-model="myForm.gen" value="Male"><br/>    
+ Female: <input type="radio" ng-model="myForm.gen" value="Female">     
+</form> 
+You are <p style="color:blue";> {{myForm.gen}}
+</h2>
+</p>   
+</div> 
+</body> 
+</html>  
+
+
+
+Binding Select Boxes
+
+Example 12
+<html> 
+<head> 
+<script src= "angular.min.js"></script> 
+</head>   <body ng-app="app">     
+<div ng-controller="Test">        
+Select Name: <select ng-model="name">         
+<option ng-repeat="item in items" value="{{item}}">{{item}}</option>       
+</select>      
+<p>Selected Name is : {{name}}</p>     
+</div>     
+<script>     
+var app = angular.module('app',[]); 
+app.controller('Test',function($scope)
+{    
+$scope.items = ['amit','kiran','peter','sonu','kumar'] });     
+</script>   
+</body> 
+</html> 
+
+
+---------------------------------
+Angular-2 we can create custom pipes.
+------------------------------------------------------
+1.Pipename :- this is the name of the pipe. (multiply,division)
+2.Pipeclass :-this is the name of the class assigned to the custom pipe.
+3.Transform :- This is the function to work with the pipe.
+4.Parameters :- This are the prameters which is passed to the pipe.
+5.Returntype -This is the return type of the pipe.
+---------------------------------------------------------------------------------
+import {Pipe, PipeTransform } from '@angular/core';
+@Pipe({name:'Pipename'})
+export class Pipeclass implements PipeTransform
+{transform(parameter):returntype{}
+}
+-------------------------------------------------------------
+import {Pipe,PipeTransform} from '@angular/core';
+@Pipe({name: 'Multiplier'})
+export class Multiplierpipe implements PipeTransform
+{
+    transform(value:number, multiply: string):number
+    {
+        let mul = parseFloat(multiply);
+        return mul * value
+    }
+}
+-------------------------------
+*In Angular2 you can make the use of DOM element structure of HTML to change the value of the elements at run time.
+
+1)[value] :- this is used to bind the expression data to the input element's value property.
+
+2)(input) :- this is a declarative way of binding an expression to the input element's input event.
+
+3)$event.target.value :- the expression that gets executed when the input is done.
+
+
+-------------------
+<div>
+  Enter your name <input [value]="name" (input) ="name = $event.target.value">
+  {{name}}
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
